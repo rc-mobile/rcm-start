@@ -1,0 +1,46 @@
+{
+  "name": "rc-mobile",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/rc-mobile.js",
+  "types": "./",
+  "files": [
+    "components",
+    "lib",
+    "dist",
+    "docs",
+    "LICENSE",
+    "README.md",
+    "package.json",
+    "tsconfig.json"
+  ],
+  "scripts": {
+    "start": "node server.js",
+    "doc": "npx styleguidist server",
+    "build:es": "RUN_ENV=ES webpack",
+    "build:lib": "RUN_ENV=PROD webpack",
+    "build:demo": "RUN_ENV=DEMO webpack",
+    "build:doc": "npx styleguidist build",
+    "deploy": "npm run build:es && npm run build:lib",
+    "bundle": "RUN_ENV=BUNDLE webpack"
+  },
+  "author": "tongxiaokang",
+  "license": "ISC",
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1",
+    "x-tools": "0.0.0-alpha.2"
+  },
+  "devDependencies": {
+    "@types/classnames": "^2.2.7",
+    "@types/react": "^16.8.3",
+    "html-webpack-plugin": "^3.2.0",
+    "rcm-tools": "0.0.10",
+    "react-docgen-typescript": "^1.12.3",
+    "react-styleguidist": "^8.0.6"
+  },
+  "styleGlobal": [
+    "./components/style/global.scss"
+  ]
+}

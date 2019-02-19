@@ -1,0 +1,6 @@
+{
+  "name": "Page",
+  "version": "0.0.1",
+  "main": "./Page.tsx",
+  "types": "./Page.tsx"
+}
